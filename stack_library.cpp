@@ -4,37 +4,43 @@ using namespace std;
 
 class Stack_Class {
 public:
-// Member function jaha all stack operations are written
-    void demo() {
-        // Creates a stack s that stores integers
-        stack<int> s;
+    stack<int> s;        
+    // Member function jaha all stack operations are written
 
+    void IDFxn() {
+    // Creates a stack s that stores integers
+// push
         // Adds elements to stack
         // Stack becomes (top → bottom): 40 30 20 10
         s.push(10);
         s.push(20);
         s.push(30);
         s.push(40);
-
+// pop
         // Removes top elements
         // Removes 40 and 30
         // Stack becomes: 20 10
         s.pop();
         s.pop();
 
-        // top() returns top element without deleting it
+// top() returns top element without deleting it
         cout << "Top element: " << s.top() << endl;
+    }
 
-        // Checks if stack is empty
+// empty()
+    void isEmpty(){
+
         if (s.empty()) {
             cout << "Stack is empty";
         } else {
             cout << "Stack is not empty";
         }
+    }
 
-        // STL stack has no full()
+// STL stack has no full()
 
-        // print stack
+// print stack
+    void display(){
         cout << "\nStack elements: ";
 
         // defining a stack temp
@@ -47,9 +53,10 @@ public:
         }
     }
 };
-
 int main() {
     Stack_Class obj;
-    obj.demo();
+    obj.IDFxn();
+    obj.isEmpty();
+    obj.display();
     return 0;
 }
